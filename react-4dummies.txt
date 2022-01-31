@@ -1,0 +1,122 @@
+REACT JS
+Se generan interfaces de usuario dinamicas
+React crea en memoria un Virtual DOM sobre el cual hace toda la manipulación necesaria antes de 
+aplicarla al DOM del navegador
+===================================================================================================
+Instalar node js
+
+- Actualizar npm 
+cmd => npm install -g npm@latest
+
+- Borrar caché de npm (evitar q se bajen versiones antigüas)
+cmd => npm cache clean --force
+
+===================================================================================================
+- Instalar react
+cmd => npm install -g create-react-app
+
+===================================================================================================
+Error "SELF_SIGNED_CERT_IN_CHAIN" usando npm?
+cmd => npm config set strict-ssl false
+
+===================================================================================================
+- Crear proyecto
+En la carpeta del proyecto:
+cmd => create-react-app react-basico
+
+- Ejecutar proyecto
+Dentro de la carpeta "react-basico"
+cmd => npm start
+"npm start" inicia un servidor web en la carpeta especificada
+Desde el navagador => http://localhost:3000/
+===================================================================================================
+- Build
+Dentro de la carpeta "react-basico"
+cmd => npm run build
+Genera una versión del codigo para producción en la carpeta build
+
+- serve
+cmd => npm install -g serve
+Instala un servidor en el cual se podrá ejecutar la versión build de nuestro proyecto
+cmd => serve -s build 
+
+===================================================================================================
+- Componentes
+Son funciones/clases que retornan elementos HTML
+Pueden tener un estado (variables internas que controlan el componente)
+Pueden tener propiedades que definen al componente
+
+	- Clase (Presentacion.js)
+	=====================================================
+	import React from 'react';
+	
+	class NombreComponente extends Component {
+		render(){
+			return (<estructuraComponente>this.props.Propiedad</estructuraComponente>);
+		}
+	}
+	
+	export default NombreComponente;
+	=====================================================
+	
+	- Funcion (FormInput.js)
+	=====================================================
+	function NombreComponente(props){
+		return (<estructuraComponente>this.props.Propiedad</estructuraComponente>);
+	}
+	
+	export default NombreComponente;
+	=====================================================
+	
+	- Funcion expresada
+	=====================================================
+	const NombreComponente = (props) => <estructuraComponente>props.Propiedad</estructuraComponente>
+	
+	export default NombreComponente;
+	=====================================================
+	
+	Las props no son alterables (readonly) el valor que reciba el componente es el que se mantiene siempre
+	{string, numbre, boolean, array, objs, funciones, elementos y componentes de react }
+	
+	<Componente 
+		PropString="dato1" 
+		PropNumber={777} 
+		PropBoolean={true} 
+		PropArray={[1,2,3]} 
+		PropObj={variable}>
+	</Componente>
+
+===================================================================================================
+- Estado
+Datos internos que controlan la logica del componente
+Permite que el componente reaccione a cambios, haciendo que se renderice de nuevo.
+Componentes basados en clases
+
+	En el contructor de la clase se debe de inicializar el estado
+	=====================================================
+	class CompoEstado extends Component{
+		contructor(props){
+			super(props);
+			this.state = {
+				nombreVar1 = valorVar1,
+				nombreVar2 = valorVar2
+			};
+		}
+
+		render(){
+			return (
+				<estructuraComponente></estructuraComponente>
+			)
+		};
+	}
+	=====================================================
+
+	Para actualizar el valor de una variable del estado, se tiene que hacer uso del metodo
+	setState();
+
+	=====================================================
+	this.setState({
+		nombreVar1: nuevoValorVar1
+	});
+	=====================================================
+===================================================================================================
