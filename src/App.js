@@ -5,6 +5,7 @@ import "./App.css";
 import FI from "./components/FormInput";
 import Presy from "./components/Presentacion";
 import PresFnc from "./components/PresentacionFnc";
+import Est from "./components/Estado";
 // ================================================================
 
 // ================================================================
@@ -101,6 +102,9 @@ function App() {
           </form>
         </section>
         <hr />
+        <section>
+          <Est></Est>
+        </section>
       </header>
     </div>
   );
