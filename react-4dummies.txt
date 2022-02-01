@@ -76,7 +76,7 @@ Pueden tener propiedades que definen al componente
 	=====================================================
 	
 	Las props no son alterables (readonly) el valor que reciba el componente es el que se mantiene siempre
-	{string, numbre, boolean, array, objs, funciones, elementos y componentes de react }
+	{string, number, boolean, array, objs, funciones, elementos y componentes de react }
 	
 	<Componente 
 		PropString="dato1" 
