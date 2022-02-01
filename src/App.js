@@ -3,6 +3,7 @@ import "./App.css";
 
 //Se importa el componente con un nombre personalizado
 import FI from "./components/FormInput";
+import Presy from "./components/Presentacion";
 // ================================================================
 
 // ================================================================
@@ -22,6 +23,10 @@ function fecha(fecha_actual) {
 function App() {
   // Parametros enviados a los componentes
   let _fecha = new Date();
+
+  let _nombre = "Edgar Chávez M";
+  let _github = "https://github.com/alexdta/";
+  let _conocimientos = ["C#", "Postgresql", "HTML", "JavaScript", "GIT"];
   // ========================================================
 
   return (
@@ -40,6 +45,19 @@ function App() {
           </a>
         </p>
 
+        <section className="componentes">
+          {
+            //Llamando a un componente
+            //Se hace una etiqueta tipo HTML con el nombre del componente <Presy />
+            //Las propiedades de la etiqueta serán los parametros que se le pasen al componente
+          }
+          <Presy
+            nombre={_nombre}
+            github={_github}
+            conocimientos={_conocimientos}
+          />
+        </section>
+        <br />
         {
           //Llamado a una función con parametros
           fecha(_fecha.toLocaleDateString())
@@ -47,7 +65,7 @@ function App() {
 
         <hr />
         {
-          // Llamado a componente de clase con parametros
+          // Llamado a componente con parametros
           // Se hace una etiqueta tipo HTML con el nombre del componente <FI></FI> o <FI />
           // Las propiedades de la etiqueta serán los parámetros que se le pasen al componente
         }
@@ -58,6 +76,7 @@ function App() {
             <FI etiqueta="Edad" tipo="number" id="3" />
           </form>
         </section>
+        <hr />
       </header>
     </div>
   );

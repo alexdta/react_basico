@@ -7,7 +7,7 @@ function FormInput(props) {
 
     return (
         <div className="form-group">
-            <label className="control-label" htmlFor={props.id}>{props.etiqueta}</label>
+            <label className="control-label" htmlFor={props.id}>{props.etiqueta}:</label>
             <input type={props.tipo} id={props.id} className="form-control" />
         </div>
     );
