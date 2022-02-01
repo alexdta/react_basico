@@ -4,13 +4,14 @@ import "./App.css";
 //Se importa el componente con un nombre personalizado
 import FI from "./components/FormInput";
 import Presy from "./components/Presentacion";
+import PresFnc from "./components/PresentacionFnc";
 // ================================================================
 
 // ================================================================
 //Componente en forma de función
 //Recibe el dato de fecha
 //Retorna un H3 con el dato recibido
-function fecha(fecha_actual) {
+function Fecha01(fecha_actual) {
   var mostrarFecha = (
     <div>
       <h3>La fecha de hoy es: {fecha_actual}</h3>
@@ -18,6 +19,16 @@ function fecha(fecha_actual) {
   );
   return mostrarFecha;
 }
+function Fecha02(props) {
+  var mostrarFecha = (
+    <div>
+      <h3>La fecha actual es: {props.fecha_actual}</h3>
+    </div>
+  );
+  return mostrarFecha;
+}
+
+const Fecha03 = (props) => <div><h3>Hoy es: {props.fecha_actual}</h3></div>;
 // ================================================================
 
 function App() {
@@ -51,7 +62,13 @@ function App() {
             //Se hace una etiqueta tipo HTML con el nombre del componente <Presy />
             //Las propiedades de la etiqueta serán los parametros que se le pasen al componente
           }
-          <Presy
+          {/* <Presy
+            nombre={_nombre}
+            github={_github}
+            conocimientos={_conocimientos}
+          /> */}
+
+          <PresFnc
             nombre={_nombre}
             github={_github}
             conocimientos={_conocimientos}
@@ -60,8 +77,15 @@ function App() {
         <br />
         {
           //Llamado a una función con parametros
-          fecha(_fecha.toLocaleDateString())
+          Fecha01(_fecha.toLocaleDateString())
+
+          /* 
+          Abajo se aprecia el llamado a 2 funciones que hacen lo mismo pero las funciones
+          y la forma de crear el componente es distinta
+          */
         }
+        <Fecha02 fecha_actual={_fecha.toLocaleDateString()} />
+        <Fecha03 fecha_actual={_fecha.toLocaleDateString()} />
 
         <hr />
         {
