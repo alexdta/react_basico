@@ -6,12 +6,16 @@ import FI from "./components/FormInput";
 import Presy from "./components/Presentacion";
 import PresFnc from "./components/PresentacionFnc";
 import Est from "./components/Estado";
+import RenderIf from "./components/RenderCondicional";
 // ================================================================
 
 // ================================================================
-//Componente en forma de función
-//Recibe el dato de fecha
-//Retorna un H3 con el dato recibido
+/*
+Componente en forma de función
+Recibe el dato de fecha
+Retorna un H3 con el dato recibido
+3 versiones
+*/
 function Fecha01(fecha_actual) {
   var mostrarFecha = (
     <div>
@@ -104,6 +108,10 @@ function App() {
         <hr />
         <section>
           <Est></Est>
+        </section>
+        <hr />
+        <section>
+          <RenderIf></RenderIf>
         </section>
       </header>
     </div>
