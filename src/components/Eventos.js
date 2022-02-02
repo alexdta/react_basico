@@ -81,3 +81,25 @@ export class EventosES7 extends Component {
 		);
 	}
 }
+
+const MiBoton =(props) => (
+  <button className="btn btn-outline-primary" onClick={props.miOnClick}>Otro Saludo <i className="ms-1 fas fa-hand-spock"></i></button>
+);
+
+export class MasSobreEventos extends Component {
+	handleClick = (e, mensaje) => {
+		console.log(mensaje);
+	};
+
+	render() {
+		return (
+			<div>
+				<h2>Más Sobre Eventos</h2>
+				<button className="btn btn-primary me-1" onClick={(e) => this.handleClick(e, "Hola Que Hace!?")}>
+					Saludar<i className="ms-1 far fa-hand-spock"></i>
+				</button>
+        <MiBoton miOnClick={(e) => this.handleClick(e, "Que Tal!?")}></MiBoton>
+			</div>
+		);
+	}
+}

@@ -7,7 +7,7 @@ import Presy from "./components/Presentacion";
 import PresFnc from "./components/PresentacionFnc";
 import Est from "./components/Estado";
 import RenderIf from "./components/RenderCondicional";
-import { Eventos, EventosES7 } from "./components/Eventos";
+import { Eventos, EventosES7, MasSobreEventos} from "./components/Eventos";
 // ================================================================
 
 // ================================================================
@@ -123,7 +123,8 @@ function App() {
 					<Eventos />
 					<hr />
 					<EventosES7 />
-					<EventosES7 />
+          <hr />
+          <MasSobreEventos />
 				</section>
 			</header>
 		</div>
