@@ -7,6 +7,7 @@ import Presy from "./components/Presentacion";
 import PresFnc from "./components/PresentacionFnc";
 import Est from "./components/Estado";
 import RenderIf from "./components/RenderCondicional";
+import Evento from "./components/Eventos";
 // ================================================================
 
 // ================================================================
@@ -33,7 +34,11 @@ function Fecha02(props) {
   return mostrarFecha;
 }
 
-const Fecha03 = (props) => <div><h3>Hoy es: {props.fecha_actual}</h3></div>;
+const Fecha03 = (props) => (
+  <div>
+    <h3>Hoy es: {props.fecha_actual}</h3>
+  </div>
+);
 // ================================================================
 
 function App() {
@@ -111,7 +116,11 @@ function App() {
         </section>
         <hr />
         <section>
-          <RenderIf></RenderIf>
+          <RenderIf />
+        </section>
+        <hr />
+        <section>
+          <Evento />
         </section>
       </header>
     </div>
