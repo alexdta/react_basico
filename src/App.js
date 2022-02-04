@@ -7,7 +7,8 @@ import Presy from "./components/Presentacion";
 import PresFnc from "./components/PresentacionFnc";
 import Est from "./components/Estado";
 import RenderIf from "./components/RenderCondicional";
-import { Eventos, EventosES7, MasSobreEventos} from "./components/Eventos";
+import { Eventos, EventosES7, MasSobreEventos } from "./components/Eventos";
+import Comunicacion from "./components/Comunicacion";
 // ================================================================
 
 // ================================================================
@@ -65,18 +66,14 @@ function App() {
 						REACT JS<i className="ms-1 fab fa-react"></i>
 					</a>
 				</p>
-
-				<section className="componentes">
+				<section>
+					<hr />
 					{
 						//Llamando a un componente
 						//Se hace una etiqueta tipo HTML con el nombre del componente <Presy />
 						//Las propiedades de la etiqueta serán los parametros que se le pasen al componente
 					}
-					{/* <Presy
-            nombre={_nombre}
-            github={_github}
-            conocimientos={_conocimientos}
-          /> */}
+					{/* <Presy nombre={_nombre} github={_github} conocimientos={_conocimientos} /> */}
 
 					<PresFnc
 						nombre={_nombre}
@@ -84,47 +81,60 @@ function App() {
 						conocimientos={_conocimientos}
 					/>
 				</section>
-				<br />
-				{
-					//Llamado a una función con parametros
-					Fecha01(_fecha.toLocaleDateString())
-
-					/* 
-          Abajo se aprecia el llamado a 2 funciones que hacen lo mismo pero las funciones
-          y la forma de crear el componente es distinta
-          */
-				}
-				<Fecha02 fecha_actual={_fecha.toLocaleDateString()} />
-				<Fecha03 fecha_actual={_fecha.toLocaleDateString()} />
-
-				<hr />
-				{
-					// Llamado a componente con parametros
-					// Se hace una etiqueta tipo HTML con el nombre del componente <FI></FI> o <FI />
-					// Las propiedades de la etiqueta serán los parámetros que se le pasen al componente
-				}
 				<section>
+					<hr />
+					{
+						//Llamado a una función con parametros
+						Fecha01(_fecha.toLocaleDateString())
+
+						/* 
+          				Abajo se aprecia el llamado a 2 funciones 
+						que hacen lo mismo pero las funciones
+          				y la forma de crear el componente es distinta
+          				*/
+					}
+					<Fecha02 fecha_actual={_fecha.toLocaleDateString()} />
+					<Fecha03 fecha_actual={_fecha.toLocaleDateString()} />
+				</section>
+				<section>
+					<hr />
+					{
+						// Llamado a componente con parametros
+						// Se hace una etiqueta tipo HTML con el nombre del componente <FI></FI> o <FI />
+						// Las propiedades de la etiqueta serán los parámetros que se le pasen al componente
+					}
 					<form>
 						<FI etiqueta="Nombre" tipo="text" id="1" requerido="required"></FI>
 						<FI etiqueta="Fecha" tipo="date" id="2" />
 						<FI etiqueta="Edad" tipo="number" id="3" />
 					</form>
 				</section>
-				<hr />
 				<section>
+					<hr />
 					<Est></Est>
 				</section>
-				<hr />
 				<section>
+					<hr />
+					{/*
+						Renderizado condicional
+						Se dibuja uno u otro componente dependiendo del estado del mismo
+						this.state = { session: true };
+						o
+						this.state = { session: false };
+						*/}
 					<RenderIf />
 				</section>
-				<hr />
 				<section>
+					<hr />
 					<Eventos />
 					<hr />
 					<EventosES7 />
-          <hr />
-          <MasSobreEventos />
+					<hr />
+					<MasSobreEventos />
+				</section>
+				<section>
+					<hr />
+					<Comunicacion></Comunicacion>
 				</section>
 			</header>
 		</div>
