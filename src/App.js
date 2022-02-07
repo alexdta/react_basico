@@ -10,6 +10,7 @@ import RenderIf from "./components/RenderCondicional";
 import { Eventos, EventosES7, MasSobreEventos } from "./components/Eventos";
 import Comunicacion from "./components/Comunicacion";
 import CicloVida from "./components/CicloVida";
+import AjaxApis from "./components/AjaxApis";
 // ================================================================
 
 // ================================================================
@@ -57,9 +58,9 @@ function App() {
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<p>
-					Aprendiendo{" "}
+					Aprendiendo
 					<a
-						className="btn btn-primary"
+						className="ms-1 btn btn-primary"
 						href="https://reactjs.org"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -140,6 +141,10 @@ function App() {
 				<section>
 					<hr />
 					<CicloVida />
+				</section>
+				<section>
+					<hr />
+					<AjaxApis />
 				</section>
 			</header>
 		</div>
