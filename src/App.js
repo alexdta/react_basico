@@ -9,6 +9,7 @@ import Est from "./components/Estado";
 import RenderIf from "./components/RenderCondicional";
 import { Eventos, EventosES7, MasSobreEventos } from "./components/Eventos";
 import Comunicacion from "./components/Comunicacion";
+import CicloVida from "./components/CicloVida";
 // ================================================================
 
 // ================================================================
@@ -134,7 +135,11 @@ function App() {
 				</section>
 				<section>
 					<hr />
-					<Comunicacion></Comunicacion>
+					<Comunicacion />
+				</section>
+				<section>
+					<hr />
+					<CicloVida />
 				</section>
 			</header>
 		</div>
