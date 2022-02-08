@@ -11,6 +11,7 @@ import { Eventos, EventosES7, MasSobreEventos } from "./components/Eventos";
 import Comunicacion from "./components/Comunicacion";
 import CicloVida from "./components/CicloVida";
 import AjaxApis from "./components/AjaxApis";
+import ContadorHooks from "./components/ContadorHooks";
 // ================================================================
 
 // ================================================================
@@ -145,6 +146,10 @@ function App() {
 				<section>
 					<hr />
 					<AjaxApis />
+				</section>
+				<section>
+					<hr />
+					<ContadorHooks valorInicial={100} />
 				</section>
 			</header>
 		</div>
